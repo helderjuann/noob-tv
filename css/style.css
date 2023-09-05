@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+body{
+    background-color: #1565c0;
+}
+
+header{
+    background-color: #0d47a1;
+}
+
+.clear {
+    clear: both;
+}
+
+.center {
+    max-width: 1280px;
+    margin:0 auto;
+    padding:0 2%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container { 
+    max-width: 1280px;
+    margin:0 auto;
+    padding:0 2%;
+}
+
+.w33 {
+    width: 33.3%;
+}
+
+.flex-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo img{
+    max-width: 200px;
+    width: 100%;
+}
+
+header input[type=text] {
+    width: 100%;
+    max-width: 320px;
+    padding: 10px 10px;
+    position: relative;
+    top: 25px;
+}
+
+header .menu-desktop ul {
+    list-style-type: none;
+}
+
+header .menu-desktop ul li {
+    display: inline-block;
+    padding: 35px 0;
+    margin: 0 15px;
+}
+
+header .menu-desktop ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+header .menu-mobile {
+    display: none;
+    float: right;
+}
+
+header .menu-mobile p {
+    font-size: 40px;
+    color: #2196f3;
+    position: relative;
+    right: 80px;
+    bottom: 65px;
+    cursor: pointer;
+}
+
+header .menu-mobile ul {
+    display: none;
+    background-color: rgba(52, 144, 230, 0.8);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100px;
+    list-style-type: none;
+    text-align: center;
+}
+
+header .menu-mobile ul li a {
+    padding: 8px 0;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.banner-principal{
+    width:100%;
+    height:400px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.main h2{
+    color: white;
+    width: 100%;
+    margin:30px 0;
+}
+
+.card-movie{
+    width:20%;
+}
+
+.card-movie img{
+    width: 100%;
+    transition: 1s;
+}
+
+.card-movie img:hover{
+    transform:scale(1.1,1.1);
+}
+
+@media screen and (max-width: 768px) {
+    header .logo img {
+        max-width: 270px;
+    }
+
+     header .menu-desktop {
+        display: none;
+    }
+
+    header .menu-mobile {
+        display: block;
+        position: relative;
+        top: 10px;
+    }
+
+    .w33 {
+        width: 100%;
+    }
+
+    header input[type=text] {
+        width: 100%;
+        padding: 10px 10px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    header .logo img {
+        max-width: 200px;
+    }
+
+    header .menu-mobile p {
+        font-size: 40px;
+        color: #2196f3;
+        position: relative;
+        right: 10px;
+        bottom: 55px;
+    }
+
+    header .menu-mobile ul {
+        top: 80px;
+    }
+}
