@@ -1,2 +1,5 @@
 # noob-tv
-Um modelo de site para assistir filmes e séries em que utilizei fetch api
+
+Um site inspirado no Prime Video
+
+*Feito com Fetch API* -> Por enquanto não está responsivo, irei atualizar o quanto antes!
