@@ -5,174 +5,109 @@
     font-family: arial;
 }
 
-body{
-    background-color: #1565c0;
+body, .search:focus, 
+.movie-info span {
+  background-color: #640D14;
 }
 
-header{
-    background-color: #0d47a1;
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.clear {
-    clear: both;
+header, .movie {
+  background-color: #800E13;
 }
 
-.center {
-    max-width: 1280px;
-    margin:0 auto;
-    padding:0 2%;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.container { 
-    max-width: 1280px;
-    margin:0 auto;
-    padding:0 2%;
-}
-
-.w33 {
-    width: 33.3%;
-}
-
-.flex-wrap {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.logo {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.logo img{
-    max-width: 200px;
-    width: 100%;
-}
-
-header input[type=text] {
-    width: 100%;
-    max-width: 320px;
-    padding: 10px 10px;
-    position: relative;
-    top: 25px;
-}
-
-header .menu-desktop ul {
-    list-style-type: none;
-}
-
-header .menu-desktop ul li {
-    display: inline-block;
-    padding: 35px 0;
-    margin: 0 15px;
-}
-
-header .menu-desktop ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-header .menu-mobile {
-    display: none;
-    float: right;
-}
-
-header .menu-mobile p {
-    font-size: 40px;
-    color: #2196f3;
-    position: relative;
-    right: 80px;
-    bottom: 65px;
+header img {
+    width: 180px;
+    max-width: 100%;
     cursor: pointer;
 }
 
-header .menu-mobile ul {
-    display: none;
-    background-color: rgba(52, 144, 230, 0.8);
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 100px;
-    list-style-type: none;
-    text-align: center;
+.search, .search::placeholder,
+.movie-info {
+  color: #fff;
 }
 
-header .menu-mobile ul li a {
-    padding: 8px 0;
-    text-decoration: none;
-    color: white;
-    display: block;
+.search {
+  background-color: transparent;
+  border: 2px solid #640D14;
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
 }
 
-.banner-principal{
-    width:100%;
-    height:400px;
-    background-size: cover;
-    background-position: center;
+.search:focus {
+  outline: none;
 }
 
-
-.main h2{
-    color: white;
-    width: 100%;
-    margin:30px 0;
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.card-movie{
-    width:20%;
+.movie {
+  width: 300px;
+  margin: 1rem;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
 }
 
-.card-movie img{
-    width: 100%;
-    transition: 1s;
+.movie img {
+  width: 100%;
 }
 
-.card-movie img:hover{
-    transform:scale(1.1,1.1);
+.movie-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
 }
 
-@media screen and (max-width: 768px) {
-    header .logo img {
-        max-width: 270px;
-    }
-
-     header .menu-desktop {
-        display: none;
-    }
-
-    header .menu-mobile {
-        display: block;
-        position: relative;
-        top: 10px;
-    }
-
-    .w33 {
-        width: 100%;
-    }
-
-    header input[type=text] {
-        width: 100%;
-        padding: 10px 10px;
-    }
+.movie-info h3 {
+  margin-top: 0;
 }
 
-@media screen and (max-width: 460px) {
-    header .logo img {
-        max-width: 200px;
-    }
+.movie-info span {
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
 
-    header .menu-mobile p {
-        font-size: 40px;
-        color: #2196f3;
-        position: relative;
-        right: 10px;
-        bottom: 55px;
-    }
+.movie-info span.green {
+  color: lightgreen;
+}
 
-    header .menu-mobile ul {
-        top: 80px;
-    }
+.movie-info span.orange {
+  color: orange;
+  position: relative;
+  top: 1px;
+}
+
+.movie-info span.red {
+  color: red;
+}
+
+.overview {
+  background-color: #fff;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
 }
