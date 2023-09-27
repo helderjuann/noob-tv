@@ -111,3 +111,12 @@ main {
 .movie:hover .overview {
   transform: translateY(0);
 }
+
+@media screen and (max-width: 480px) {
+  header {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
